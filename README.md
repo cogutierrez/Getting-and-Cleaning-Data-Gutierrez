@@ -51,4 +51,4 @@ if (!file.exists('./UCI HAR Dataset.zip')){
 
 #Part five: Part four continuation. 
 > data.tidy <- aggregate(data.sub[,3:81], by = list(activity = data.sub$activity, subject = data.sub$subject),FUN = mean)
-> write.table(x = data.tidy, file = "data_tidy.txt", row.names = FALSE)
+> write.table(data.tidy, row.name=FALSE)
